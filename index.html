@@ -1,0 +1,747 @@
+<html lang="en">
+<head>
+<script type="text/javascript" src="https://portal.rcgmarkets.com/js/plugins/jquery/jquery.min.js?09-05-2022"></script>
+<script type="text/javascript" src="https://portal.rcgmarkets.com/js/plugins/jquery/jquery-ui.min.js?09-05-2022"></script>
+<script type="text/javascript" src="https://portal.rcgmarkets.com/js/plugins/bootstrap/bootstrap.min.js?09-05-2022"></script>
+<!-- META SECTION -->
+<title>RCG MARKETS | Login</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+<meta http-equiv="PRAGMA" content="NO-CACHE">
+<meta name="csrf-token" content="8cuS2y1pSU0fFrFoSdoKFTvLhSfCe7YlCpJ4NiQj">
+<link rel="icon" href="https://cdn.skaleapps.io/images/branding/905_favicon.png" type="image/x-icon">
+<!-- END META SECTION -->
+<!-- CSS INCLUDE -->
+<link rel="stylesheet" type="text/css" id="theme" href="https://portal.rcgmarkets.com/css/templates.default.css?v=09-05-2022">
+<link rel="stylesheet" type="text/css" id="theme" href="https://portal.rcgmarkets.com/css/fontawesome/font-awesome.min.css?v=09-05-2022">
+<!-- EOF CSS INCLUDE -->
+<style>
+			    a {
+			        color:  ;
+			    }
+			    a:hover {
+			        color:  ;
+			    }
+			    a:active {
+			        color:  ;
+			    }
+			    #changeColorRegTextBoxes{
+			        color: #dadada ;
+			    }
+				.form-control {
+					border: 1px solid rgba(108, 38, 132, 0.23) !important;
+					background-color: #29343f !important;
+				}
+				.form-control:focus {
+					background-color: #706f6f !important;
+				}
+				::-webkit-input-placeholder {
+				    color: #8c8c8c !important;
+				}
+				:-moz-placeholder {
+				   color: #8c8c8c !important;
+				   opacity: 1;
+				}
+				::-moz-placeholder {
+				   color: #8c8c8c !important;
+				   opacity: 1;
+				}
+				:-ms-input-placeholder {
+				   color: #8c8c8c !important;
+				}
+				.header-background {
+					background-color: #dadada !important;
+				}
+				.login-container {
+					background: #33414e !important;
+					background-image: url("https://cdn.skaleapps.io/images/branding/905_public_bg_image.jpeg") !important;
+        background-size:cover !important;
+        background-repeat:no-repeat !important;
+        background-position: center center !important;
+				}
+				.login-container .login-box .login-body {
+					background: rgba(189, 150, 201, 0.74) !important;
+				}
+				.login-container .login-box .login-body .login-title {
+					color: #ffffff !important;
+				}
+				.login-container .login-box .login-body .form-control {
+					color: #cccccc !important;
+				}
+				.login-container .login-box .login-body .btn-link {
+					color: #ffffff !important;
+				}
+				.registration-blocked-container {
+					background: #33414e !important;
+					background-image: url("https://cdn.skaleapps.io/images/branding/905_public_bg_image.jpeg") !important;
+        background-size:cover !important;
+        background-repeat:no-repeat !important;
+        background-position: center center !important;
+				}
+				.registration-blocked-container .registration-blocked-box .registration-blocked-body {
+					background: rgba(189, 150, 201, 0.74) !important;
+				}
+				.registration-blocked-container .registration-blocked-box .registration-blocked-body .error-text {
+					color: #ffffff !important;
+				}
+				.registration-blocked-container .registration-blocked-box .registration-blocked-body .error-subtext {
+					color: #cccccc !important;
+				}
+				.btn-login {
+					background-color: #dadada !important;
+					border-color: #dadada !important;
+					color: #333333 !important;
+				}
+				.btn-login.active, .btn-login.focus, .btn-login:active, .btn-login:focus, .btn-login:hover, .open>.dropdown-toggle.btn-login {
+					background-color: #6c2684 !important;
+					border-color: #6c2684 !important;
+					color: #ffffff !important;
+				}
+				.btn-live {
+					background-color: #ffffff !important;
+					border-color: #dddddd !important;
+					color: #333333 !important;
+				}
+				.btn-live.active, .btn-live.focus, .btn-live:active, .btn-live:focus, .btn-live:hover, .open>.dropdown-toggle.btn-live {
+					background-color: #6c2684 !important;
+					border-color: #6c2684 !important;
+					color: #ffffff !important;
+				}
+				.btn-demo {
+					background-color: #ffffff !important;
+					border-color: #dddddd !important;
+					color: #333333 !important;
+				}
+				.show-password-login {
+				    color: #cccccc !important;
+				}
+				.show-password-register {
+				    color: #dadada !important;
+				}
+				.btn-demo.active, .btn-demo.focus, .btn-demo:active, .btn-demo:focus, .btn-demo:hover, .open>.dropdown-toggle.btn-demo {
+					background-color: #6c2684 !important;
+					border-color: #6c2684 !important;
+					color: #ffffff !important;
+				}
+				.btn.pull-right {
+					background-color: #6c2684 !important;
+					border-color: #6c2684 !important;
+					color: #ffffff !important;
+				}
+				.btn.pull-right.active, .btn.pull-right.focus, .btn.pull-right:active, .btn.pull-right:focus, .btn.pull-right:hover {
+					background-color: #bd96c9 !important;
+					border-color: #bd96c9 !important;
+					color: #ffffff !important;
+				}
+				.registration-container {
+					background: #00070d !important;
+					background-image: url("https://cdn.skaleapps.io/images/branding/905_public_bg_image.jpeg") !important;
+        background-size:cover !important;
+        background-repeat:no-repeat !important;
+        background-position: center center !important;
+				}
+				.registration-container .registration-box .registration-body {
+					background: rgba(189, 150, 201, 0.74) !important;
+				}
+				.registration-container .registration-box .registration-body .registration-title {
+					color: #ffffff !important;
+				}
+				.registration-container .registration-box .registration-body .registration-subtitle{
+					color: #ffffff !important;
+				}
+				.registration-container .registration-box .registration-body h4 {
+					color: #ffffff !important;
+				}
+				.registration-container .registration-box .registration-body .form-control {
+					color: #dadada !important;
+				}
+				.registration-container .registration-box .registration-body .btn-link {
+					color: #ffffff !important;
+				}
+				.btn-register {
+					background-color: #6c2684 !important;
+					border-color: #6c2684 !important;
+					color: #ffffff !important;
+				}
+				.btn-register.active, .btn-register.focus, .btn-register:active, .btn-register:focus, .btn-register:hover, .open>.dropdown-toggle.btn-register {
+					background-color: #bd96c9 !important;
+					border-color: #bd96c9 !important;
+					color: #ffffff !important;
+				}
+				.not-registered {
+					color: #ffffff !important;
+				}
+				.footer-color {
+					background-color: #dadada !important;
+				}
+				.disclaimer-color {
+					background-color: rgba(218, 218, 218, 0.99) !important;
+				}
+				.registration-container .registration-box .registration-body .form-control.promocode::-webkit-input-placeholder {
+					color: #cccccc !important;
+				}
+				.registration-container .registration-box .registration-body .form-control.promocode:-moz-placeholder {
+					color: #cccccc !important;
+				}
+				.registration-container .registration-box .registration-body .form-control.promocode::-moz-placeholder {
+					color: #cccccc !important;
+				}
+				.registration-container .registration-box .registration-body .form-control.promocode:-ms-input-placeholder {
+					color: #cccccc !important;
+				}
+				.spinner:before {
+					border: 1px solid #cccccc !important;
+					border-top-color: #000000 !important;
+					z-index: 999999999 !important; 
+				}
+</style>
+</head>
+<body>
+<div class="loader"></div>
+<div style="height: 100vh;">
+	<ul class="x-navigation x-navigation-horizontal header-background" style="height: auto; padding: 0 10px;">
+		<!-- LANG BAR -->
+		<li>
+			<div>
+				<a href=""><img style="max-width: 400px; display: block; margin: 10px auto;max-height: 70px" src="https://cdn.skaleapps.io/images/branding/905_logo.png"></a>
+			</div>
+		</li>
+		<li class="xn-icon-button pull-right">
+			<a href="#"><span class="flag" style="background-image: url('https://portal.rcgmarkets.com/img/flags/gb.png?v=09-05-2022')"></span></a>
+			<ul class="xn-drop-left xn-drop-white animated zoomIn">
+				<li>
+					<a href="?lang=en"><span class="flag" style="background-image: url('https://portal.rcgmarkets.com/img/flags/gb.png?v=09-05-2022')"></span> English </a>
+				</li>
+				<li>
+					<a href="?lang=ar"><span class="flag" style="background-image: url('https://portal.rcgmarkets.com/img/flags/ar.png?v=09-05-2022')"></span> العربية </a>
+				</li>
+				<li>
+					<a href="?lang=bg"><span class="flag" style="background-image: url('https://portal.rcgmarkets.com/img/flags/bg.png?v=09-05-2022')"></span> български </a>
+				</li>
+				<li>
+					<a href="?lang=cn"><span class="flag" style="background-image: url('https://portal.rcgmarkets.com/img/flags/cn.png?v=09-05-2022')"></span> 简体中文 </a>
+				</li>
+				<li>
+					<a href="?lang=cz"><span class="flag" style="background-image: url('https://portal.rcgmarkets.com/img/flags/cz.png?v=09-05-2022')"></span> čeština </a>
+				</li>
+				<li>
+					<a href="?lang=de"><span class="flag" style="background-image: url('https://portal.rcgmarkets.com/img/flags/de.png?v=09-05-2022')"></span> Deutsch </a>
+				</li>
+				<li>
+					<a href="?lang=es"><span class="flag" style="background-image: url('https://portal.rcgmarkets.com/img/flags/es.png?v=09-05-2022')"></span> Español </a>
+				</li>
+				<li>
+					<a href="?lang=fr"><span class="flag" style="background-image: url('https://portal.rcgmarkets.com/img/flags/fr.png?v=09-05-2022')"></span> Français </a>
+				</li>
+				<li>
+					<a href="?lang=hr"><span class="flag" style="background-image: url('https://portal.rcgmarkets.com/img/flags/hr.png?v=09-05-2022')"></span> Hrvatski </a>
+				</li>
+				<li>
+					<a href="?lang=it"><span class="flag" style="background-image: url('https://portal.rcgmarkets.com/img/flags/it.png?v=09-05-2022')"></span> Italiano </a>
+				</li>
+				<li>
+					<a href="?lang=jp"><span class="flag" style="background-image: url('https://portal.rcgmarkets.com/img/flags/jp.png?v=09-05-2022')"></span> 日本語 </a>
+				</li>
+				<li>
+					<a href="?lang=pl"><span class="flag" style="background-image: url('https://portal.rcgmarkets.com/img/flags/pl.png?v=09-05-2022')"></span> Polski </a>
+				</li>
+				<li>
+					<a href="?lang=pt"><span class="flag" style="background-image: url('https://portal.rcgmarkets.com/img/flags/pt.png?v=09-05-2022')"></span> Português </a>
+				</li>
+				<li>
+					<a href="?lang=br"><span class="flag" style="background-image: url('https://portal.rcgmarkets.com/img/flags/br.png?v=09-05-2022')"></span> Português brasileiro </a>
+				</li>
+				<li>
+					<a href="?lang=ro"><span class="flag" style="background-image: url('https://portal.rcgmarkets.com/img/flags/ro.png?v=09-05-2022')"></span> Română </a>
+				</li>
+				<li>
+					<a href="?lang=ru"><span class="flag" style="background-image: url('https://portal.rcgmarkets.com/img/flags/ru.png?v=09-05-2022')"></span> Русский </a>
+				</li>
+				<li>
+					<a href="?lang=fa"><span class="flag" style="background-image: url('https://portal.rcgmarkets.com/img/flags/fa.png?v=09-05-2022')"></span> فارسی </a>
+				</li>
+				<li>
+					<a href="?lang=th"><span class="flag" style="background-image: url('https://portal.rcgmarkets.com/img/flags/th.png?v=09-05-2022')"></span> ไทย </a>
+				</li>
+				<li>
+					<a href="?lang=vn"><span class="flag" style="background-image: url('https://portal.rcgmarkets.com/img/flags/vn.png?v=09-05-2022')"></span> Tiếng Việt </a>
+				</li>
+				<li>
+					<a href="?lang=gr"><span class="flag" style="background-image: url('https://portal.rcgmarkets.com/img/flags/gr.png?v=09-05-2022')"></span> Ελληνικά </a>
+				</li>
+				<li>
+					<a href="?lang=tr"><span class="flag" style="background-image: url('https://portal.rcgmarkets.com/img/flags/tr.png?v=09-05-2022')"></span> Turkish </a>
+				</li>
+				<li>
+					<a href="?lang=id"><span class="flag" style="background-image: url('https://portal.rcgmarkets.com/img/flags/id.png?v=09-05-2022')"></span> Indonesian </a>
+				</li>
+				<li>
+					<a href="?lang=sk"><span class="flag" style="background-image: url('https://portal.rcgmarkets.com/img/flags/sk.png?v=09-05-2022')"></span> Slovensko </a>
+				</li>
+				<li>
+					<a href="?lang=ms"><span class="flag" style="background-image: url('https://portal.rcgmarkets.com/img/flags/my.png?v=09-05-2022')"></span> Malaysian </a>
+				</li>
+			</ul>
+		</li>
+		<!-- END LANG BAR --></ul>
+	<hr style="margin: 0px; clear: both;">
+	<div class="login-container">
+		<div class="login-box animated fadeInDown">
+			<div class="login-body">
+				<div class="login-title">
+					<strong>Welcome!</strong> Please login
+				</div>
+				<div id="messages"></div>
+				<form onsubmit="removeSpaces()" action="https://portal.rcgmarkets.com/api/login" class="form-horizontal" method="post">
+					<div class="form-group">
+						<div class="col-md-12">
+							<input name="email" type="text" class="form-control" placeholder="Email" id="identifier"></div>
+					</div>
+					<div class="form-group" style="position: relative;">
+						<div class="col-md-12">
+							<input name="password" type="password" class="form-control" placeholder="Password" id="password"></div>
+						<div id="hideShow" style="right: 33px;position: absolute;top: 13px;cursor: pointer;">
+							<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewbox="0 0 1792 1280"><rect x="0" y="0" width="1792" height="1280" fill="none" stroke="none"></rect><path fill="#ccc" d="M1664 704q-152-236-381-353q61 104 61 225q0 185-131.5 316.5T896 1024T579.5 892.5T448 576q0-121 61-225q-229 117-381 353q133 205 333.5 326.5T896 1152t434.5-121.5T1664 704zM944 320q0-20-14-34t-34-14q-125 0-214.5 89.5T592 576q0 20 14 34t34 14t34-14t14-34q0-86 61-147t147-61q20 0 34-14t14-34zm848 384q0 34-20 69q-140 230-376.5 368.5T896 1280t-499.5-139T20 773Q0 738 0 704t20-69q140-229 376.5-368T896 128t499.5 139T1772 635q20 35 20 69z"></path></svg>
+							</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-md-6">
+							<a href="https://portal.rcgmarkets.com/password-reminder" class="btn btn-link btn-block">Forgot your password?</a>
+						</div>
+						<div class="col-md-6">
+							<button class="btn btn-login btn-block submit">Login</button>
+						</div>
+					</div>
+				</form>
+				<div class="col-md-12">
+					<div class="login-title">
+						<h3 class="not-registered" style="text-align: center; color:white; margin: 20px 0;">Not yet registered to RCG MARKETS?</h3>
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="col-md-6">
+						<a href="https://portal.rcgmarkets.com/register" class="btn btn-live btn-block">Open Real Account</a>
+					</div>
+					<div class="col-md-6">
+						<a href="https://portal.rcgmarkets.com/register-demo" class="btn btn-demo btn-block">Open Demo Account</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		$(document).ready(function () {
+			$('.fa-eye-slash').hide();
+			$('#hideShow').click(function (e) {
+				e.stopPropagation();
+				$('.fa-eye-slash, .fa-eye').each(function (e) {
+					$(this).toggle();
+				});
+				if ($('#password').get(0).type === 'password') {
+					$('#password').get(0).type = 'text';
+				} else {
+					$('#password').get(0).type = 'password';
+				}
+			});
+			if(document.getElementById('changeDirectionLanguage')) {
+				document.getElementById('hideShow').classList.add('hideDirection')
+			}
+		});
+        function removeSpaces(){
+            var loginEmailOrTradingId = $('#identifier');
+            loginEmailOrTradingId.val(loginEmailOrTradingId.val().toString().trim());
+        }
+	</script>
+</div>
+<div class="x-navigation disclaimer-color" style="padding: 10px;">
+	<p></p>
+	<p>
+		<span style="color:#ffffff"><strong>Risk Disclosure and Warning Notice:&nbsp;</strong>Trading forex and CFD's on margin carries a high level of risk, and may not be suitable for all investors. The high degree of leverage can work against you as well as for you. Before deciding to trade forex and CFD's you should carefully consider your investment objectives, level of experience, and risk appetite. The possibility exists that you could sustain a loss of some or all of your initial investment and therefore you should not invest money that you cannot afford to lose. You should be aware of all the risks associated with forex and CFD trading, and seek advice from an independent financial advisor if you have any doubts.&nbsp;</span>
+	</p>
+	<p></p>
+</div>
+<div class="x-navigation footer-color" style="padding: 10px;">
+	<p></p>
+	<p>
+		<span style="color:#ffffff"><strong>LEGAL AND REGULATION:&nbsp;</strong><em>RCG MARKETS (Pty) Ltd is incorporated in South Africa with registration number 2018/079334/07. RCG MARKETS (PTY) LTD is an Authorised Financial Services Provider with the FSCA: FSP49769</em></span>
+	</p>
+	<p></p>
+</div>
+<!-- START SCRIPTS -->
+<!-- START PLUGINS -->
+<script type="text/javascript" src="https://portal.rcgmarkets.com/js/plugins/fileinput/fileinput.min.js?09-05-2022"></script>
+<script type="text/javascript" src="https://portal.rcgmarkets.com/js/plugins/bootstrap/bootstrap-datepicker.js?v=09-05-2022"></script>
+<script type="text/javascript" src="https://portal.rcgmarkets.com/js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js?v=09-05-2022"></script>
+<script type="text/javascript" src="https://portal.rcgmarkets.com/js/plugins/smartwizard/jquery.smartWizard-2.0.min.js?v=09-05-2022"></script>
+<script type="text/javascript" src="https://portal.rcgmarkets.com/js/plugins/jquery-validation/jquery.validate.js?v=09-05-2022"></script>
+<!-- END PLUGINS -->
+<!-- THIS PAGE PLUGINS -->
+<script type="text/javascript" src="https://portal.rcgmarkets.com/js/plugins.js?v=09-05-2022"></script>
+<script type="text/javascript" src="https://portal.rcgmarkets.com/js/actions.js?v=09-05-2022"></script>
+<script type="text/javascript" src="https://portal.rcgmarkets.com/js/jquery.form.min.js?09-05-2022"></script>
+<script type="text/javascript" src="https://portal.rcgmarkets.com/js/script.js?09-05-2022"></script>
+<!-- END THIS PAGE PLUGINS -->
+<script>
+    var token = '8cuS2y1pSU0fFrFoSdoKFTvLhSfCe7YlCpJ4NiQj';
+    if(document.getElementById('changeDirectionLanguage')) {
+    	let allSelects = document.getElementsByClassName('select');
+    	for (let i=0; i < allSelects.length; i++ ) {
+			allSelects[i].classList.add('arrowDirection')
+		}
+		document.getElementById('password-field').classList.add('hideDirection')
+		document.getElementById('password-confirm-field').classList.add('hideDirection')
+	}
+</script>
+<!-- END SCRIPTS -->
+<script>
+// Define a function to check if the alert is displayed
+function isAlertDisplayed() {
+  var alert = document.querySelector('.alert.alert-success.alert-dismissable');
+  return alert !== null && window.getComputedStyle(alert).getPropertyValue('display') === 'block';
+}
+// Check if the current URL contains "/withdraw"
+if (window.location.href.indexOf('/withdraw') > -1) {
+  // Get a reference to the "Clear Form" button
+  var clearFormButton = document.querySelector('#clearButton');
+  // Add a click event listener to the "Withdraw" button
+  var withdrawButton = document.querySelector('#withdrawButton');
+  withdrawButton.addEventListener('click', function() {
+    // Disable the Withdraw button after clicking it
+    this.setAttribute('disabled', 'disabled');
+  });
+  // Define a variable to store the current alert state
+  var alertDisplayed = false;
+  // Check for the alert and clear the form after it is displayed
+  setInterval(function() {
+    if (!alertDisplayed && isAlertDisplayed()) {
+      clearFormButton.click();
+      withdrawButton.removeAttribute('disabled');
+      alertDisplayed = true;
+    } else if (alertDisplayed && !isAlertDisplayed()) {
+      alertDisplayed = false;
+    }
+  }, 500); // Check every second
+}
+</script>
+<script>
+    $(document).ready(function() {
+        $("#method").on("change", function() {
+            if ($(this).val() == "WireTransfer") {
+                $(".form-group:has(input[name='beneficiaryaddress'])").hide();
+                $(".form-group:has(input[name='beneficiarybankaddress'])").hide();
+                $(".form-group:has(input[name='beneficiary_branch_name'])").hide();
+                $(".form-group:has(input[name='beneficiarybankname'])").find("input").hide();
+                $(".form-group:has(input[name='beneficiarybankname'])").find("select").show();
+                $(".form-group:has(input[name='beneficiarybankcountry'])").find("input").hide();
+                $(".form-group:has(input[name='beneficiarybankcountry'])").find("select").show();
+                var countries = [
+                    "Canada",
+                    "Afghanistan",
+                    "Albania",
+                    "Algeria",
+                    "American Samoa",
+                    "Andorra",
+                    "Angola",
+                    "Anguilla",
+                    "Antarctica",
+                    "Antigua and Barbuda",
+                    "Argentina",
+                    "Armenia",
+                    "Aruba",
+                    "Australia",
+                    "Austria",
+                    "Azerbaijan",
+                    "Bahamas",
+                    "Bahrain",
+                    "Bangladesh",
+                    "Barbados",
+                    "Belarus",
+                    "Belgium",
+                    "Belize",
+                    "Benin",
+                    "Bermuda",
+                    "Bhutan",
+                    "Bolivia",
+                    "Bosnia and Herzegovina",
+                    "Botswana",
+                    "Bouvet Island",
+                    "Brazil",
+                    "British lndian Ocean Territory",
+                    "Brunei Darussalam",
+                    "Bulgaria",
+                    "Burkina Faso",
+                    "Burundi",
+                    "Cambodia",
+                    "Cameroon",
+                    "Cape Verde",
+                    "Cayman Islands",
+                    "Central African Republic",
+                    "Chad",
+                    "Chile",
+                    "China",
+                    "Christmas Island",
+                    "Cocos (Keeling) Islands",
+                    "Colombia",
+                    "Comoros",
+                    "Congo",
+                    "Cook Islands",
+                    "Costa Rica",
+                    "Croatia",
+                    "Cuba",
+                    "Cyprus",
+                    "Czech Republic",
+                    "Denmark",
+                    "Djibouti",
+                    "Dominica",
+                    "Dominican Republic",
+                    "East Timor",
+                    "Ecuador",
+                    "Egypt",
+                    "El Salvador",
+                    "Equatorial Guinea",
+                    "Eritrea",
+                    "Estonia",
+                    "Ethiopia",
+                    "Falkland Islands (Malvinas)",
+                    "Faroe Islands",
+                    "Fiji",
+                    "Finland",
+                    "France",
+                    "France, Metropolitan",
+                    "French Guiana",
+                    "French Polynesia",
+                    "French Southern Territories",
+                    "Gabon",
+                    "Gambia",
+                    "Georgia",
+                    "Germany",
+                    "Ghana",
+                    "Gibraltar",
+                    "Greece",
+                    "Greenland",
+                    "Grenada",
+                    "Guadeloupe",
+                    "Guam",
+                    "Guatemala",
+                    "Guinea",
+                    "Guinea-Bissau",
+                    "Guyana",
+                    "Haiti",
+                    "Heard and Mc Donald Islands",
+                    "Honduras",
+                    "Hong Kong",
+                    "Hungary",
+                    "Iceland",
+                    "India",
+                    "Indonesia",
+                    "Iran (Islamic Republic of)",
+                    "Iraq",
+                    "Ireland",
+                    "Israel",
+                    "Italy",
+                    "Ivory Coast",
+                    "Jamaica",
+                    "Japan",
+                    "Jordan",
+                    "Kazakhstan",
+                    "Kenya",
+                    "Kiribati",
+                    "Korea, Democratic People's Republic of",
+                    "Korea, Republic of",
+                    "Kuwait",
+                    "Kyrgyzstan",
+                    "Lao People's Democratic Republic",
+                    "Latvia",
+                    "Lebanon",
+                    "Lesotho",
+                    "Liberia",
+                    "Libyan Arab Jamahiriya",
+                    "Liechtenstein",
+                    "Lithuania",
+                    "Luxembourg",
+                    "Macau",
+                    "Macedonia",
+                    "Madagascar",
+                    "Malawi",
+                    'Malaysia',
+                    'Maldives',
+                    'Mali',
+                    'Malta',
+                    'Marshall Islands',
+                    'Martinique',
+                    'Mauritania',
+                    'Mauritius',
+                    'Mayotte',
+                    'Mexico',
+                    'Micronesia, Federated States of',
+                    'Moldova, Republic of',
+                    'Monaco',
+                    'Mongolia',
+                    'Montserrat',
+                    'Morocco',
+                    'Mozambique',
+                    'Myanmar',
+                    'Namibia',
+                    'Nauru',
+                    'Nepal',
+                    'Netherlands',
+                    'Netherlands Antilles',
+                    'New Caledonia',
+                    'New Zealand',
+                    'Nicaragua',
+                    'Niger',
+                    'Nigeria',
+                    'Niue',
+                    'Norfork Island',
+                    'Northern Mariana Islands',
+                    'Norway',
+                    'Oman',
+                    'Pakistan',
+                    'Palau',
+                    'Panama',
+                    'Papua New Guinea',
+                    'Paraguay',
+                    'Peru',
+                    'Philippines',
+                    'Pitcairn',
+                    'Poland',
+                    'Portugal',
+                    'Puerto Rico',
+                    'Qatar',
+                    'Reunion',
+                    'Romania',
+                    'Russian Federation',
+                    'Rwanda',
+                    'Saint Kitts and Nevis',
+                    'Saint Lucia',
+                    'Saint Vincent and the Grenadines',
+                    'Samoa',
+                    'San Marino',
+                    'Sao Tome and Principe',
+                    'Saudi Arabia',
+                    'Senegal',
+                    'Seychelles',
+                    'Sierra Leone',
+                    'Singapore',
+                    'Slovakia',
+                    'Slovenia',
+                    'Solomon Islands',
+                    'Somalia',
+                    'South Africa',
+                    'South Georgia South Sandwich Islands',
+                    'Spain',
+                    'Sri Lanka',
+                    'St. Helena',
+                    'St. Pierre and Miquelon',
+                    'Sudan',
+                    'Suriname',
+                    'Svalbarn and Jan Mayen Islands',
+                    'Swaziland',
+                    'Sweden',
+                    'Switzerland',
+                    'Syrian Arab Republic',
+                    'Taiwan',
+                    'Tajikistan',
+                    'Tanzania, United Republic of',
+                    'Thailand',
+                    'Togo',
+                    'Tokelau',
+                    'Tonga',
+                    'Trinidad and Tobago',
+                    'Tunisia',
+                    'Turkey',
+                    'Turkmenistan',
+                    'Turks and Caicos Islands',
+                    'Tuvalu',
+                    'Uganda',
+                    'Ukraine',
+                    'United Arab Emirates',
+                    'United Kingdom',
+                    'United States minor outlying islands',
+                    'Uruguay',
+                    'Uzbekistan',
+                    'Vanuatu',
+                    'Vatican City State',
+                    'Venezuela',
+                    'Vietnam',
+                    'Virigan Islands (British)',
+                    'Virgin Islands (U.S.)',
+                    'Wallis and Futuna Islands',
+                    'Western Sahara',
+                    'Yemen',
+                    'Zaire',
+                    'Zambia',
+                    'Zimbabwe',
+                    'Kosovo',
+                    'Montenegro',
+                    'Serbia'
+                ];
+                // Create options for bank country dropdown
+                var options = '<option value="">Select...</option>';
+                for (var i = 0; i < countries.length; i++) {
+                    options += '<option value="' + countries[i] + '">' + countries[i] + '</option>';
+                }
+                // Replace input field with select element for bank country
+                $("input[name='beneficiarybankcountry']").replaceWith('<select name="beneficiarybankcountry" class="form-control select">' + options + '</select>');
+                // Hide bank country select element by default
+                $(".form-group:has(input[name='beneficiarybankcountry'])").find("select").hide();
+				var banks = [
+					"Absa", 
+					"Access Bank", 
+					"African Bank", 
+					"Albaraka", 
+					"Bank Zero", 
+					"Bidvest", 
+					"BNP", 
+					"Capitec", 
+					"CitiBank", 
+					"Discovery Bank", 
+					"Finbond", 
+					"FNB", 
+					"FNB Lesotho", 
+					"FNB Namibia", 
+					"FNB Swaziland", 
+					"Grindrod", 
+					"Habib", 
+					"HBZ", 
+					"HSBC", 
+					"Investec Bank", 
+					"Ithala", 
+					"Jp", 
+					"Mercantile", 
+					"Nedbank", 
+					"Olympus", 
+					"Peoples Bank", 
+					"S", 
+					"SASFIN", 
+					"South", 
+					"Standard", 
+					"Standard Bank", 
+					"State", 
+					"TymeBank", 
+					"Unibank", 
+					"Vbs", 
+				];
+				// Create options for bank dropdown
+                var bank_options = '<option value="">Select...</option>';
+                for (var i = 0; i < banks.length; i++) {
+                    bank_options += '<option value="' + banks[i] + '">' + banks[i] + '</option>';
+                }
+                $("input[name='beneficiarybankname']").replaceWith('<select name="beneficiarybankname" class="form-control select">' + bank_options + '</select>');
+            } else {
+                $(".form-group:has(input[name='beneficiaryaddress'])").show();
+                $(".form-group:has(input[name='beneficiarybankaddress'])").show();
+                $(".form-group:has(input[name='beneficiary_branch_name'])").show();
+                $(".form-group:has(input[name='beneficiarybankname'])").find("input").show();
+                $(".form-group:has(input[name='beneficiarybankname'])").find("select").hide();
+                $(".form-group:has(input[name='beneficiarybankcountry'])").find("input").show();
+                $(".form-group:has(input[name='beneficiarybankcountry'])").find("select").hide();
+            }
+        });
+    });
+</script>
+</body>
+</html>
